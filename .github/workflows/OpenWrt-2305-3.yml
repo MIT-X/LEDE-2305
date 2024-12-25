@@ -3,8 +3,7 @@ name:  OpenWrt-2305-3
 on: 
   workflow_dispatch:
   schedule:
-    - cron: 20 00 * * *
-
+  
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
