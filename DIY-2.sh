@@ -1,6 +1,7 @@
 # 此脚本用处是：定制个性化参数
 #=====================================================================
-
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 rm -rf ./feeds/luci/applications/luci-app-passwall && cp -rf ./feeds/passwall ./feeds/luci/applications/luci-app-passwall
 rm -rf ./feeds/luci/applications/luci-app-passwall2 && cp -rf ./feeds/passwall2 ./feeds/luci/applications/luci-app-passwall2
 rm -rf ./feeds/luci/applications/luci-app-openclash && cp -rf ./feeds/openclash ./feeds/luci/applications/luci-app-openclash
