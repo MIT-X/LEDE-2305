@@ -75,15 +75,8 @@ jobs:
     - name: 更新外部插件
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: 替换默认插件
-      run: |
-        cd openwrt
-        rm -rf ./feeds/luci/applications/luci-app-passwall
-        rm -rf ./feeds/luci/applications/luci-app-passwall2
-        rm -rf ./feeds/luci/applications/luci-app-openclash
-        rm -rf feeds/packages/lang/golang
-        git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-        ./scripts/feeds install -a
+    - name: 读取外部插件
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: 加载个人设置
       run: |
