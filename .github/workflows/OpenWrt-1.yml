@@ -1,8 +1,8 @@
 name:  OpenWrt-1
 
 on: 
+  repository_dispatch:
   workflow_dispatch:
-  schedule:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
