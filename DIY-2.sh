@@ -2,9 +2,6 @@
 #=====================================================================
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-rm -rf ./feeds/luci/applications/luci-app-passwall && cp -rf ./feeds/passwall ./feeds/luci/applications/luci-app-passwall
-rm -rf ./feeds/luci/applications/luci-app-passwall2 && cp -rf ./feeds/passwall2 ./feeds/luci/applications/luci-app-passwall2
-rm -rf ./feeds/luci/applications/luci-app-openclash && cp -rf ./feeds/openclash ./feeds/luci/applications/luci-app-openclash
 
 # 1-更改默认地址
 sed -i 's/192.168.1.1/192.168.2.222/g' package/base-files/files/bin/config_generate
