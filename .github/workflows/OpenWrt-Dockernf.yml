@@ -1,4 +1,4 @@
-name:  OpenWrt-23.05
+name:  OpenWrt-Dockernf
 
 on:
   repository_dispatch:
@@ -8,7 +8,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 2305.config
+  CONFIG_FILE: dockernf.config
   DIY_P1_SH: DIY-1.sh
   DIY_P2_SH: DIY-2.sh
   UPLOAD_FIRMWARE: true
@@ -161,7 +161,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} -OpenWrt-23.05
+        name: ${{ env.FILE_TIME }} -OpenWrt-dockernf
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
